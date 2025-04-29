@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white_off"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="@string/app_title"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/primary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/value_to_convert"
+                app:startIconDrawable="@drawable/ic_input_value">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/from_unit"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <Spinner
+                android:id="@+id/spinnerFromUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/spinner_background"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/to_unit"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <Spinner
+                android:id="@+id/spinnerToUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/spinner_background"
+                android:minHeight="48dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonConvert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/convert"
+                android:textAllCaps="false"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/primary"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:text="10 Metros = 0.01 Quilômetros" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

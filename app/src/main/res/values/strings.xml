@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Conversor de Unidades</string>
+    <string name="app_title">Conversor de Unidades</string>
+    <string name="value_to_convert">Valor a converter</string>
+    <string name="from_unit">De</string>
+    <string name="to_unit">Para</string>
+    <string name="convert">Converter</string>
+    <string name="app_logo">Logo do aplicativo</string>
+    <string name="error_empty_value">Por favor, insira um valor</string>
+    <string name="error_invalid_number">Por favor, insira um número válido</string>
+    <string name="result_format">%.2f %s = %.2f %s</string>
+</resources>
